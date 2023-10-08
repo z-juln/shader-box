@@ -7,8 +7,7 @@ out vec4 vColor;
 
 uniform mat4 modelViewProjectionMatrix;
 
-void main()
-{
+void main() {
   gl_Position = a_position;
   gl_PointSize = max(iResolution.x, iResolution.y);
   vColor = color;

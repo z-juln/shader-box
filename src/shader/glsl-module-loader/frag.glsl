@@ -1,9 +1,11 @@
 #version 300 es
 #extension GL_GOOGLE_include_directive : enable
+precision highp float;
+
 #include <./utils.glsl>
+
 #define PI 3.14
 
-precision highp float;
 uniform float iTime;
 uniform vec2 iResolution;
 out vec4 FragColor;

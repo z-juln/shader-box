@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "gl-now": "^1.4.0",
-    "gl-shader": "^4.3.1"
+    "gl-shader": "^4.3.1",
+    "glsl-noise": "^0.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
@@ -23,8 +24,10 @@
     "cross-env": "^7.0.3",
     "events": "^3.1.0",
     "glsl-module-loader": "^1.0.2",
+    "glslify-loader": "^2.0.0",
     "html-webpack-plugin": "^5.5.3",
     "process": "^0.11.10",
+    "raw-loader": "^4.0.2",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "util": "^0.12.3",
