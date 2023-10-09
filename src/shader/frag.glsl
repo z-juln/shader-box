@@ -2,7 +2,10 @@
 #extension GL_GOOGLE_include_directive : enable
 precision highp float;
 
-#include <./utils.glsl>
+#pragma glslify: utils_double = require('./utils/utils-double')
+#pragma glslify: utils_add = require('./utils/utils-add')
+
+#include <./utils/utils-common.glsl>
 
 #define PI 3.14
 

@@ -1813,6 +1813,20 @@ css-what@^6.0.1:
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-6.1.0.tgz#fb5effcf76f1ddea2c81bdfaa4de44e79bac70f4"
   integrity sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
 
+cssauron-glsl@X.X.X:
+  version "1.0.0"
+  resolved "http://npm.meitu-int.com/cssauron-glsl/-/cssauron-glsl-1.0.0.tgz#9873641442b52bae08b9103f8546885af69c74cc"
+  integrity sha512-sD3jmsxxLlDiAgPT/YqMljdZmKke8RWw/b+K+qF1V0SRhSwqHSpEFF0sWIitJ8e6DjXT4o3C0KP262oubWCLIA==
+  dependencies:
+    cssauron "~1.0.0"
+
+cssauron@~1.0.0:
+  version "1.0.0"
+  resolved "http://npm.meitu-int.com/cssauron/-/cssauron-1.0.0.tgz#3c9891541075be90ee59c0c2a3d400e4fffec42d"
+  integrity sha1-PJiRVBB1vpDuWcDCo9QA5P/+xC0=
+  dependencies:
+    through X.X.X
+
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.npmmirror.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2276,6 +2290,14 @@ globals@^11.1.0:
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
+glsl-deparser@^1.0.0:
+  version "1.0.0"
+  resolved "http://npm.meitu-int.com/glsl-deparser/-/glsl-deparser-1.0.0.tgz#5e7eb363ec54af92916ccffc82ed03e9bfe33e0c"
+  integrity sha512-keVY8exsnfNR03T4zYQLBRyYnOCy27uZMq/64sKISUAPe2JpHQMegcx3T7UHdFlJxckro+4v5fnmDga6bHXf+w==
+  dependencies:
+    cssauron-glsl X.X.X
+    through "~1.1.2"
+
 glsl-inject-defines@^1.0.1:
   version "1.0.3"
   resolved "http://npm.meitu-int.com/glsl-inject-defines/-/glsl-inject-defines-1.0.3.tgz#dd1aacc2c17fcb2bd3fc32411c6633d0d7b60fd4"
@@ -2285,18 +2307,26 @@ glsl-inject-defines@^1.0.1:
     glsl-token-string "^1.0.1"
     glsl-tokenizer "^2.0.2"
 
-glsl-module-loader@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/glsl-module-loader/-/glsl-module-loader-1.0.2.tgz#adf53f727708dfd84bb6ca21d6a94ef0192abbd6"
-  integrity sha512-wl4UZlh7U6xNbK+73zR52WEt/2ayXY3iYcNBBdVxFNn+UJZseVP8/qU2jHnQEa/qWsjbNwYCq/rkRhqvqrxsMA==
+glsl-module-loader@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/glsl-module-loader/-/glsl-module-loader-1.0.3.tgz#f051046f5dab3ca5a97fa331e4a68f22210d92cd"
+  integrity sha512-dvnuRARI6hwX3+S6ZsP0G/bFsR0lt7ckYQeSx9o3qJ4OXwQCy5lVTcMwgmbeVt/2mDUZp0TZYpeI3xdfa3aVIw==
   dependencies:
     loader-utils "^2.0.0"
-    schema-utils "^3.0.0"
 
 glsl-noise@^0.0.0:
   version "0.0.0"
   resolved "http://npm.meitu-int.com/glsl-noise/-/glsl-noise-0.0.0.tgz#367745f3a33382c0eeec4cb54b7e99cfc1d7670b"
   integrity sha1-NndF86MzgsDu7Ey1S36Zz8HXZws=
+
+glsl-parser@^2.0.1:
+  version "2.0.1"
+  resolved "http://npm.meitu-int.com/glsl-parser/-/glsl-parser-2.0.1.tgz#3ffac4ee05cc4d8141fd6b1e41e82b3766ff61b9"
+  integrity sha512-hcPQtfz0AtxkyooSvim0RsHFNsiHXTY80GX2GtoTpFTImxW3cOINpb0cY6HFKnYkbheQRM7cDzCzzItNT6ZSiA==
+  dependencies:
+    glsl-tokenizer "^2.1.4"
+    through "2.3.4"
+    through2 "^0.6.3"
 
 glsl-resolve@0.0.1:
   version "0.0.1"
@@ -2366,7 +2396,7 @@ glsl-token-whitespace-trim@^1.0.0:
   resolved "http://npm.meitu-int.com/glsl-token-whitespace-trim/-/glsl-token-whitespace-trim-1.0.0.tgz#46d1dfe98c75bd7d504c05d7d11b1b3e9cc93b10"
   integrity sha1-RtHf6Yx1vX1QTAXX0RsbPpzJOxA=
 
-glsl-tokenizer@^2.0.0, glsl-tokenizer@^2.0.2:
+glsl-tokenizer@^2.0.0, glsl-tokenizer@^2.0.2, glsl-tokenizer@^2.1.4:
   version "2.1.5"
   resolved "https://registry.npmmirror.com/glsl-tokenizer/-/glsl-tokenizer-2.1.5.tgz#1c2e78c16589933c274ba278d0a63b370c5fee1a"
   integrity sha512-XSZEJ/i4dmz3Pmbnpsy3cKh7cotvFlBiZnDOwnj/05EwNp2XrhQ4XKJxT7/pDt4kp4YcpRSKz8eTV7S+mwV6MA==
@@ -3736,6 +3766,21 @@ through2@^0.6.3:
   dependencies:
     readable-stream ">=1.0.33-1 <1.1.0-0"
     xtend ">=4.0.0 <4.1.0-0"
+
+through@2.3.4:
+  version "2.3.4"
+  resolved "http://npm.meitu-int.com/through/-/through-2.3.4.tgz#495e40e8d8a8eaebc7c275ea88c2b8fc14c56455"
+  integrity sha1-SV5A6Nio6uvHwnXqiMK4/BTFZFU=
+
+through@X.X.X:
+  version "2.3.8"
+  resolved "http://npm.meitu-int.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
+
+through@~1.1.2:
+  version "1.1.2"
+  resolved "http://npm.meitu-int.com/through/-/through-1.1.2.tgz#344a5425a3773314ca7e0eb6512fbafaf76c0bfe"
+  integrity sha1-NEpUJaN3MxTKfg62US+6+vdsC/4=
 
 thunky@^1.0.2:
   version "1.1.0"

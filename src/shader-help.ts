@@ -24,8 +24,6 @@ export const initShader = ({
 
   const vertexShaderSource = parseInclude(_vertexShaderSource, includeMap).trimStart();
   const fragmentShaderSource = parseInclude(_fragmentShaderSource, includeMap).trimStart();
-  // TODO: 用raw-loader+自己写的glsl-module-loader代替
-  // console.log({ vertexShaderSource, fragmentShaderSource });
 
   // specify the source code for the shaders using those strings
   gl.shaderSource(vertexShader, vertexShaderSource);

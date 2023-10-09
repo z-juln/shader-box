@@ -1,8 +1,6 @@
 // http://www.bimant.com/blog/webgl-shader-crash-course/
-// import vertGlsl from './shader/glsl-module-loader/vert.glsl';
-// import fragGlsl from './shader/glsl-module-loader/frag.glsl';
-import vertGlsl from './shader/glslify-loader/vert.glsl';
-import fragGlsl from './shader/glslify-loader/frag.glsl';
+import vertGlsl from './shader/vert.glsl';
+import fragGlsl from './shader/frag.glsl';
 import { getWebGLRenderingContext, glLog, initShader } from './shader-help';
 
 console.log({
