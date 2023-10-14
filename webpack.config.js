@@ -25,6 +25,13 @@ module.exports = {
           'raw-loader',
           'glslify-loader',
           'glsl-module-loader',
+          'glsl-polyfill-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|jpeg|webp|gif)$/i,
+        use: [
+          'url-loader',
         ],
       },
     ],
