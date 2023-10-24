@@ -55,6 +55,7 @@ export const initShader = ({
     includeMap?: Record<string, string>;
   };
 }) => {
+  gl.viewport(0, 0, canvasInfo.width, canvasInfo.height);
   const program = gl.createProgram();
   if (!program) {
     throw new Error('Program not created');
